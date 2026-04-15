@@ -278,6 +278,7 @@ const columnHeaders = [
                 label: __('Smart'),
                 disabled: sortOrder.value.field !== 'title',
                 modelValue: sortOrder.value.smart,
+                class: 'px-2',
                 'onUpdate:modelValue': (val) => (sortOrder.value.smart = val),
               })
           },
