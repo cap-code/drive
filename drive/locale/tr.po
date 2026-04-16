@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
 "POT-Creation-Date: 2026-02-13 16:23+0000\n"
-"PO-Revision-Date: 2026-02-17 19:07\n"
+"PO-Revision-Date: 2026-04-16 01:02\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: Turkish\n"
 "MIME-Version: 1.0\n"
@@ -62,7 +62,7 @@ msgstr ""
 #. Log'
 #: drive/drive/doctype/drive_entity_activity_log/drive_entity_activity_log.json
 msgid "Action Type"
-msgstr ""
+msgstr "Eylem Türü"
 
 #: frontend/src/components/Settings/TemplateSettings.vue:70
 #: frontend/src/components/Settings/UserListSettings.vue:456
@@ -81,7 +81,7 @@ msgstr "Şablon Ekle"
 
 #: frontend/src/components/InfoPopup.vue:47
 msgid "Added"
-msgstr ""
+msgstr "Eklendi"
 
 #. Label of the allow_download (Check) field in DocType 'Drive File'
 #: drive/drive/doctype/drive_file/drive_file.json
@@ -210,7 +210,7 @@ msgstr "DocType Adı"
 #. Label of the document (Link) field in DocType 'Drive File'
 #: drive/drive/doctype/drive_file/drive_file.json
 msgid "Document"
-msgstr ""
+msgstr "Belge"
 
 #. Label of the doc (Link) field in DocType 'Drive File'
 #: drive/drive/doctype/drive_file/drive_file.json
@@ -446,7 +446,7 @@ msgstr ""
 #. Label of the file_size (Int) field in DocType 'Drive File'
 #: drive/drive/doctype/drive_file/drive_file.json
 msgid "File Size"
-msgstr ""
+msgstr "Dosya Boyutu"
 
 #. Label of the file_size (Int) field in DocType 'Drive Transfer'
 #: drive/drive/doctype/drive_transfer/drive_transfer.json
@@ -464,7 +464,7 @@ msgstr "Adı"
 #. Label of the from_user (Link) field in DocType 'Drive Notification'
 #: drive/drive/doctype/drive_notification/drive_notification.json
 msgid "From User"
-msgstr ""
+msgstr "Kullanıcıdan"
 
 #. Label of the general_section (Section Break) field in DocType 'Drive Disk
 #. Settings'
@@ -515,7 +515,7 @@ msgstr ""
 #. Label of the is_active (Int) field in DocType 'Drive File'
 #: drive/drive/doctype/drive_file/drive_file.json
 msgid "Is Active"
-msgstr ""
+msgstr "Aktif"
 
 #. Label of the is_group (Check) field in DocType 'Drive File'
 #: drive/drive/doctype/drive_file/drive_file.json
@@ -530,7 +530,7 @@ msgstr ""
 #. Label of the is_private (Check) field in DocType 'Drive File'
 #: drive/drive/doctype/drive_file/drive_file.json
 msgid "Is Private"
-msgstr ""
+msgstr "Özel mi"
 
 #. Label of the resolved (Check) field in DocType 'Drive Comment'
 #: drive/drive/doctype/drive_comment/drive_comment.json
