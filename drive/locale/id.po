@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
 "POT-Creation-Date: 2026-02-13 16:23+0000\n"
-"PO-Revision-Date: 2026-03-29 14:57\n"
+"PO-Revision-Date: 2026-04-16 01:02\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: Indonesian\n"
 "MIME-Version: 1.0\n"
@@ -77,11 +77,11 @@ msgstr ""
 #: frontend/src/components/Settings/TemplateSettings.vue:11
 #: frontend/src/components/Settings/TemplateSettings.vue:66
 msgid "Add Template"
-msgstr ""
+msgstr "Tambahkan Templat"
 
 #: frontend/src/components/InfoPopup.vue:47
 msgid "Added"
-msgstr ""
+msgstr "Ditambahkan"
 
 #. Label of the allow_download (Check) field in DocType 'Drive File'
 #: drive/drive/doctype/drive_file/drive_file.json
@@ -90,7 +90,7 @@ msgstr ""
 
 #: frontend/src/components/Sidebar.vue:124
 msgid "Apps"
-msgstr ""
+msgstr "Aplikasi"
 
 #. Label of the as_guest (Check) field in DocType 'Drive User Invitation'
 #: drive/drive/doctype/drive_user_invitation/drive_user_invitation.json
@@ -105,7 +105,7 @@ msgstr ""
 #. Option for the 'Status' (Select) field in DocType 'Drive User Invitation'
 #: drive/drive/doctype/drive_user_invitation/drive_user_invitation.json
 msgid "Automatic"
-msgstr ""
+msgstr "Otomatis"
 
 #: frontend/src/components/DriveToolBar.vue:19
 msgid "By"
@@ -164,7 +164,7 @@ msgstr ""
 #: frontend/src/components/GenericPage.vue:336
 #: frontend/src/components/Navbar.vue:221
 msgid "Copy Link"
-msgstr ""
+msgstr "Salin Tautan"
 
 #. Label of the core_section (Section Break) field in DocType 'Account Request'
 #: drive/drive/doctype/account_request/account_request.json
@@ -367,11 +367,11 @@ msgstr ""
 
 #: frontend/src/components/Settings/UserListSettings.vue:533
 msgid "Edit"
-msgstr ""
+msgstr "Sunting"
 
 #: frontend/src/components/Settings/ProfileSettings.vue:26
 msgid "Edit Profile"
-msgstr ""
+msgstr "Sunting Profil"
 
 #: frontend/src/components/Settings/TemplateSettings.vue:66
 msgid "Edit Template"
@@ -436,7 +436,7 @@ msgstr ""
 #. Option for the 'Status' (Select) field in DocType 'Drive User Invitation'
 #: drive/drive/doctype/drive_user_invitation/drive_user_invitation.json
 msgid "Expired"
-msgstr ""
+msgstr "Kedaluwarsa"
 
 #: frontend/src/components/GenericPage.vue:364
 #: frontend/src/components/Navbar.vue:250
@@ -464,7 +464,7 @@ msgstr "Nama Depan"
 #. Label of the from_user (Link) field in DocType 'Drive Notification'
 #: drive/drive/doctype/drive_notification/drive_notification.json
 msgid "From User"
-msgstr ""
+msgstr "Dari Pengguna"
 
 #. Label of the general_section (Section Break) field in DocType 'Drive Disk
 #. Settings'
@@ -515,7 +515,7 @@ msgstr ""
 #. Label of the is_active (Int) field in DocType 'Drive File'
 #: drive/drive/doctype/drive_file/drive_file.json
 msgid "Is Active"
-msgstr ""
+msgstr "Aktif"
 
 #. Label of the is_group (Check) field in DocType 'Drive File'
 #: drive/drive/doctype/drive_file/drive_file.json
@@ -570,7 +570,7 @@ msgstr ""
 
 #: drive/public/js/TreeNode.vue:52
 msgid "Load more"
-msgstr ""
+msgstr "Muat lebih banyak"
 
 #: drive/public/js/TreeNode.vue:52
 msgid "Loading..."
@@ -578,7 +578,7 @@ msgstr "Memuat..."
 
 #: frontend/src/components/Sidebar.vue:174
 msgid "Log out"
-msgstr ""
+msgstr "Keluar"
 
 #. Label of the login_count (Int) field in DocType 'Account Request'
 #: drive/drive/doctype/account_request/account_request.json
