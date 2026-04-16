@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
 "POT-Creation-Date: 2026-02-13 16:23+0000\n"
-"PO-Revision-Date: 2026-03-29 14:57\n"
+"PO-Revision-Date: 2026-04-16 01:02\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: Persian\n"
 "MIME-Version: 1.0\n"
@@ -446,7 +446,7 @@ msgstr "مورد علاقه"
 #. Label of the file_size (Int) field in DocType 'Drive File'
 #: drive/drive/doctype/drive_file/drive_file.json
 msgid "File Size"
-msgstr ""
+msgstr "حجم فایل"
 
 #. Label of the file_size (Int) field in DocType 'Drive Transfer'
 #: drive/drive/doctype/drive_transfer/drive_transfer.json
