@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
 "POT-Creation-Date: 2026-02-13 16:23+0000\n"
-"PO-Revision-Date: 2026-02-17 19:07\n"
+"PO-Revision-Date: 2026-04-16 01:02\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: Czech\n"
 "MIME-Version: 1.0\n"
@@ -62,7 +62,7 @@ msgstr ""
 #. Log'
 #: drive/drive/doctype/drive_entity_activity_log/drive_entity_activity_log.json
 msgid "Action Type"
-msgstr ""
+msgstr "Typ akce"
 
 #: frontend/src/components/Settings/TemplateSettings.vue:70
 #: frontend/src/components/Settings/UserListSettings.vue:456
@@ -77,11 +77,11 @@ msgstr ""
 #: frontend/src/components/Settings/TemplateSettings.vue:11
 #: frontend/src/components/Settings/TemplateSettings.vue:66
 msgid "Add Template"
-msgstr ""
+msgstr "Přidat šablonu"
 
 #: frontend/src/components/InfoPopup.vue:47
 msgid "Added"
-msgstr ""
+msgstr "Přidáno"
 
 #. Label of the allow_download (Check) field in DocType 'Drive File'
 #: drive/drive/doctype/drive_file/drive_file.json
@@ -105,7 +105,7 @@ msgstr ""
 #. Option for the 'Status' (Select) field in DocType 'Drive User Invitation'
 #: drive/drive/doctype/drive_user_invitation/drive_user_invitation.json
 msgid "Automatic"
-msgstr ""
+msgstr "Automatický"
 
 #: frontend/src/components/DriveToolBar.vue:19
 msgid "By"
@@ -164,7 +164,7 @@ msgstr "Obsah"
 #: frontend/src/components/GenericPage.vue:336
 #: frontend/src/components/Navbar.vue:221
 msgid "Copy Link"
-msgstr ""
+msgstr "Kopírovat odkaz"
 
 #. Label of the core_section (Section Break) field in DocType 'Account Request'
 #: drive/drive/doctype/account_request/account_request.json
@@ -446,7 +446,7 @@ msgstr ""
 #. Label of the file_size (Int) field in DocType 'Drive File'
 #: drive/drive/doctype/drive_file/drive_file.json
 msgid "File Size"
-msgstr ""
+msgstr "Velikost souboru"
 
 #. Label of the file_size (Int) field in DocType 'Drive Transfer'
 #: drive/drive/doctype/drive_transfer/drive_transfer.json
@@ -485,7 +485,7 @@ msgstr ""
 
 #: frontend/src/utils/files.js:209
 msgid "Home"
-msgstr ""
+msgstr "Domů"
 
 #. Label of the ip_address (Data) field in DocType 'Account Request'
 #: drive/drive/doctype/account_request/account_request.json
@@ -505,7 +505,7 @@ msgstr ""
 
 #: frontend/src/components/Sidebar.vue:211
 msgid "Inbox"
-msgstr ""
+msgstr "Doručená pošta"
 
 #. Label of the invite (Link) field in DocType 'Account Request'
 #: drive/drive/doctype/account_request/account_request.json
@@ -515,7 +515,7 @@ msgstr ""
 #. Label of the is_active (Int) field in DocType 'Drive File'
 #: drive/drive/doctype/drive_file/drive_file.json
 msgid "Is Active"
-msgstr ""
+msgstr "Je aktivní"
 
 #. Label of the is_group (Check) field in DocType 'Drive File'
 #: drive/drive/doctype/drive_file/drive_file.json
@@ -530,7 +530,7 @@ msgstr ""
 #. Label of the is_private (Check) field in DocType 'Drive File'
 #: drive/drive/doctype/drive_file/drive_file.json
 msgid "Is Private"
-msgstr ""
+msgstr "Je soukromý"
 
 #. Label of the resolved (Check) field in DocType 'Drive Comment'
 #: drive/drive/doctype/drive_comment/drive_comment.json
@@ -570,7 +570,7 @@ msgstr ""
 
 #: drive/public/js/TreeNode.vue:52
 msgid "Load more"
-msgstr ""
+msgstr "Načíst více"
 
 #: drive/public/js/TreeNode.vue:52
 msgid "Loading..."
@@ -578,7 +578,7 @@ msgstr "Načítání..."
 
 #: frontend/src/components/Sidebar.vue:174
 msgid "Log out"
-msgstr ""
+msgstr "Odhlásit se"
 
 #. Label of the login_count (Int) field in DocType 'Account Request'
 #: drive/drive/doctype/account_request/account_request.json
