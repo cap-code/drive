@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
 "POT-Creation-Date: 2026-02-13 16:23+0000\n"
-"PO-Revision-Date: 2026-04-16 01:02\n"
+"PO-Revision-Date: 2026-04-17 00:58\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: Indonesian\n"
 "MIME-Version: 1.0\n"
@@ -660,7 +660,7 @@ msgstr ""
 #. Label of the new_value (Data) field in DocType 'Drive Entity Activity Log'
 #: drive/drive/doctype/drive_entity_activity_log/drive_entity_activity_log.json
 msgid "New Value"
-msgstr ""
+msgstr "Nilai Baru"
 
 #: frontend/src/components/TagInput.vue:18
 msgid "No tags"
@@ -734,7 +734,7 @@ msgstr "Jalan"
 #. Option for the 'Status' (Select) field in DocType 'Drive User Invitation'
 #: drive/drive/doctype/drive_user_invitation/drive_user_invitation.json
 msgid "Pending"
-msgstr ""
+msgstr "Tertunda"
 
 #: drive/drive/doctype/drive_file/drive_file.js:6
 msgid "Permissions"
@@ -743,7 +743,7 @@ msgstr "Otorisasi"
 #. Label of the personal (Check) field in DocType 'Drive Team'
 #: drive/drive/doctype/drive_team/drive_team.json
 msgid "Personal"
-msgstr ""
+msgstr "Pribadi"
 
 #: frontend/src/components/Settings/ProfileSettings.vue:94
 msgid "Preferences"
@@ -752,7 +752,7 @@ msgstr ""
 #. Label of the prefix (Data) field in DocType 'Drive Team'
 #: drive/drive/doctype/drive_team/drive_team.json
 msgid "Prefix"
-msgstr ""
+msgstr "Awalan"
 
 #: frontend/src/components/GenericPage.vue:304
 msgid "Preview"
