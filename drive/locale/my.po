@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: frappe\n"
 "Report-Msgid-Bugs-To: developers@frappe.io\n"
 "POT-Creation-Date: 2026-02-13 16:23+0000\n"
-"PO-Revision-Date: 2026-04-16 01:02\n"
+"PO-Revision-Date: 2026-04-17 00:58\n"
 "Last-Translator: developers@frappe.io\n"
 "Language-Team: Burmese\n"
 "MIME-Version: 1.0\n"
@@ -159,7 +159,7 @@ msgstr "အတည်ပြုပါ"
 #: drive/drive/doctype/drive_document/drive_document.json
 #: frontend/src/components/Settings/TemplateSettings.vue:92
 msgid "Content"
-msgstr ""
+msgstr "အကြောင်းအရာ"
 
 #: frontend/src/components/GenericPage.vue:336
 #: frontend/src/components/Navbar.vue:221
@@ -420,12 +420,12 @@ msgstr ""
 #. Label of the entity_name (Link) field in DocType 'Drive Entity Log'
 #: drive/drive/doctype/drive_entity_log/drive_entity_log.json
 msgid "Entity Name"
-msgstr ""
+msgstr "အဖွဲ့အစည်းအမည်"
 
 #. Label of the entity_type (Data) field in DocType 'Drive Notification'
 #: drive/drive/doctype/drive_notification/drive_notification.json
 msgid "Entity Type"
-msgstr ""
+msgstr "အဖွဲ့အစည်းအမျိုးအစား"
 
 #. Description of the 'Endpoint URL' (Data) field in DocType 'Drive Disk
 #. Settings'
@@ -490,12 +490,12 @@ msgstr "ပင်မ"
 #. Label of the ip_address (Data) field in DocType 'Account Request'
 #: drive/drive/doctype/account_request/account_request.json
 msgid "IP Address"
-msgstr ""
+msgstr "IP လိပ်စာ"
 
 #. Label of the icon (Data) field in DocType 'Drive Team'
 #: drive/drive/doctype/drive_team/drive_team.json
 msgid "Icon"
-msgstr ""
+msgstr "အိုင်ကွန်"
 
 #. Description of the 'Storage' (Int) field in DocType 'Drive Team'
 #. Description of the 'Quota' (Int) field in DocType 'Drive Team'
@@ -608,19 +608,19 @@ msgstr ""
 #. Option for the 'Type' (Select) field in DocType 'Drive Notification'
 #: drive/drive/doctype/drive_notification/drive_notification.json
 msgid "Mention"
-msgstr ""
+msgstr "ဖော်ပြချက်"
 
 #. Label of the mentions (JSON) field in DocType 'Drive Document'
 #: drive/drive/doctype/drive_document/drive_document.json
 msgid "Mentions"
-msgstr ""
+msgstr "ဖော်ပြချက်များ"
 
 #. Label of the message (Data) field in DocType 'Drive Entity Activity Log'
 #. Label of the message (Text) field in DocType 'Drive Notification'
 #: drive/drive/doctype/drive_entity_activity_log/drive_entity_activity_log.json
 #: drive/drive/doctype/drive_notification/drive_notification.json
 msgid "Message"
-msgstr ""
+msgstr "စာတို"
 
 #. Label of the meta_value (Data) field in DocType 'Drive Entity Activity Log'
 #: drive/drive/doctype/drive_entity_activity_log/drive_entity_activity_log.json
@@ -637,17 +637,17 @@ msgstr ""
 #: frontend/src/components/GenericPage.vue:343
 #: frontend/src/components/Navbar.vue:232
 msgid "Move"
-msgstr ""
+msgstr "ရွှေ့မည်"
 
 #: frontend/src/components/DriveToolBar.vue:243
 #: frontend/src/components/ListView.vue:131
 msgid "Name"
-msgstr ""
+msgstr "အမည်"
 
 #: frontend/src/components/Settings/TagSettings.vue:12
 #: frontend/src/components/Settings/UserListSettings.vue:9
 msgid "New"
-msgstr ""
+msgstr "အသစ်"
 
 #: frontend/src/components/Settings/NewTagDialog.vue:4
 msgid "New Tag"
@@ -660,7 +660,7 @@ msgstr ""
 #. Label of the new_value (Data) field in DocType 'Drive Entity Activity Log'
 #: drive/drive/doctype/drive_entity_activity_log/drive_entity_activity_log.json
 msgid "New Value"
-msgstr ""
+msgstr "တန်ဖိုးအသစ်"
 
 #: frontend/src/components/TagInput.vue:18
 msgid "No tags"
@@ -702,7 +702,7 @@ msgstr ""
 
 #: frontend/src/components/GenericPage.vue:310
 msgid "Open"
-msgstr "ဖွင့်မည်။"
+msgstr "ဖွင့်"
 
 #: drive/drive/doctype/drive_file/drive_file.js:9
 #: drive/drive/doctype/drive_team/drive_team.js:6
@@ -729,21 +729,21 @@ msgstr ""
 #: drive/drive/doctype/drive_file/drive_file.json
 #: drive/drive/doctype/drive_transfer/drive_transfer.json
 msgid "Path"
-msgstr ""
+msgstr "လမ်းကြောင်း"
 
 #. Option for the 'Status' (Select) field in DocType 'Drive User Invitation'
 #: drive/drive/doctype/drive_user_invitation/drive_user_invitation.json
 msgid "Pending"
-msgstr ""
+msgstr "ဆိုင်းငံ့ထားသည်"
 
 #: drive/drive/doctype/drive_file/drive_file.js:6
 msgid "Permissions"
-msgstr ""
+msgstr "ခွင့်ပြုချက်များ"
 
 #. Label of the personal (Check) field in DocType 'Drive Team'
 #: drive/drive/doctype/drive_team/drive_team.json
 msgid "Personal"
-msgstr ""
+msgstr "ကိုယ်ပိုင်"
 
 #: frontend/src/components/Settings/ProfileSettings.vue:94
 msgid "Preferences"
@@ -752,7 +752,7 @@ msgstr ""
 #. Label of the prefix (Data) field in DocType 'Drive Team'
 #: drive/drive/doctype/drive_team/drive_team.json
 msgid "Prefix"
-msgstr ""
+msgstr "ရှေ့ဆက်"
 
 #: frontend/src/components/GenericPage.vue:304
 msgid "Preview"
@@ -878,7 +878,7 @@ msgstr ""
 
 #: frontend/src/components/InfoPopup.vue:132 frontend/src/utils/files.js:197
 msgid "Shared"
-msgstr ""
+msgstr "မျှဝေထားသည်"
 
 #: frontend/src/components/GenericPage.vue:357
 #: frontend/src/components/Navbar.vue:244
@@ -1003,7 +1003,7 @@ msgstr ""
 
 #: frontend/src/components/Settings/TemplateSettings.vue:5
 msgid "Templates"
-msgstr ""
+msgstr "ပုံစံခွက်များ"
 
 #. Label of the thumbnail_prefix (Data) field in DocType 'Drive Disk Settings'
 #: drive/drive/doctype/drive_disk_settings/drive_disk_settings.json
@@ -1138,7 +1138,7 @@ msgstr ""
 #. Activity Log'
 #: drive/drive/doctype/drive_entity_activity_log/drive_entity_activity_log.json
 msgid "create"
-msgstr ""
+msgstr "ဖန်တီးရန်"
 
 #. Option for the 'Action Type' (Select) field in DocType 'Drive Entity
 #. Activity Log'
