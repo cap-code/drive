@@ -207,6 +207,19 @@ def get_entity_with_permissions(entity_name):
             )
 
         return_obj |= entity_doc_content | {"comments": comments, "modified": entity.modified}
+    elif file_type in ("Video", "Image"):
+        comments = frappe.get_all(
+            "Drive Comment",
+            filters={"parenttype": "Drive File", "parent": entity.name},
+            fields=["content", "owner", "creation", "name", "resolved", "timestamp"],
+        )
+        for c in comments:
+            c["replies"] = frappe.get_all(
+                "Drive Comment",
+                filters={"parenttype": "Drive Comment", "parent": c["name"]},
+                fields=["content", "owner", "creation", "name"],
+            )
+        return_obj["comments"] = comments
     return return_obj
 
 

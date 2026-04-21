@@ -11,27 +11,44 @@
       />
       <div
         v-else
-        id="renderContainer"
-        :draggable="false"
-        class="w-full px-10 py-5 flex-grow w-full flex justify-center align-center items-center relative"
+        class="flex-grow flex overflow-hidden"
       >
-        <Button
-          class="text-ink-gray-8 absolute top-4 left-4"
-          :variant="'ghost'"
-          icon="arrow-left"
-          @click="closePreview"
-        />
-        <LoadingIndicator
-          v-if="file.loading"
-          class="w-10 h-full text-neutral-100"
-        />
-        <FileRender
-          v-else-if="file.data"
-          :preview-entity="file.data"
+        <div
+          id="renderContainer"
+          :draggable="false"
+          class="flex-grow px-10 py-5 flex justify-center align-center items-center relative"
+        >
+          <Button
+            class="text-ink-gray-8 absolute top-4 left-4 z-10"
+            :variant="'ghost'"
+            icon="arrow-left"
+            @click="closePreview"
+          />
+          <LoadingIndicator
+            v-if="file.loading"
+            class="w-10 h-full text-neutral-100"
+          />
+          <FileRender
+            v-else-if="file.data"
+            ref="fileRenderRef"
+            :preview-entity="file.data"
+            :comments="mediaComments"
+            @marker-click="onMarkerClick"
+          />
+        </div>
+        <MediaComments
+          v-if="isMediaType"
+          ref="mediaCommentsRef"
+          v-model:show-comments="showComments"
+          v-model:comments="mediaComments"
+          :entity="file.data"
+          :file-type="file.data?.file_type"
+          @seek-to="onSeekTo"
+          @request-timestamp="onRequestTimestamp"
         />
       </div>
       <div
-        class="hidden sm:flex absolute bottom-4 left-1/2 transform -translate-x-1/2 w-fit items-center justify-center p-1 gap-1 rounded shadow-xl l bg-surface-white"
+        class="hidden sm:flex absolute bottom-4 left-1/2 transform -translate-x-1/2 w-fit items-center justify-center p-1 gap-1 rounded shadow-xl bg-surface-white z-10"
       >
         <Button
           :disabled="!prevEntity?.name"
@@ -39,6 +56,18 @@
           icon="arrow-left"
           @click="scrollEntity(true)"
         />
+        <Button
+          v-if="isMediaType"
+          :variant="showComments ? 'subtle' : 'ghost'"
+          class="relative"
+          @click="showComments = !showComments"
+        >
+          <LucideMessageSquare class="size-4" />
+          <span
+            v-if="mediaComments.length > 0"
+            class="absolute -top-1.5 -right-1.5 min-w-[18px] h-[18px] flex items-center justify-center rounded-full bg-surface-gray-7 text-ink-white text-[10px] font-semibold leading-none px-1"
+          >{{ mediaComments.length > 9 ? '9+' : mediaComments.length }}</span>
+        </Button>
         <Button
           :variant="'ghost'"
           @click="enterFullScreen"
@@ -59,12 +88,14 @@
 <script setup>
 import { useStore } from "vuex"
 import Navbar from "@/components/Navbar.vue"
-import { ref, computed, onMounted, defineProps } from "vue"
+import { ref, computed, onMounted } from "vue"
 import { Button, LoadingIndicator } from "frappe-ui"
 import FileRender from "@/components/FileRender.vue"
+import MediaComments from "@/components/MediaComments.vue"
 import { createResource } from "frappe-ui"
 import { useRouter } from "vue-router"
 import LucideScan from "~icons/lucide/scan"
+import LucideMessageSquare from "~icons/lucide/message-square"
 import { onKeyStroke } from "@vueuse/core"
 import {
   prettyData,
@@ -82,6 +113,15 @@ const props = defineProps({
 })
 
 const currentEntity = ref(props.entityName)
+const showComments = ref(false)
+const mediaComments = ref([])
+const fileRenderRef = ref(null)
+const mediaCommentsRef = ref(null)
+
+const isMediaType = computed(() => {
+  const ft = file.data?.file_type
+  return ft === "Video" || ft === "Image"
+})
 
 const filteredEntities = computed(() =>
   store.state.currentFolder.entities.filter(
@@ -121,6 +161,7 @@ const onSuccess = async (entity) => {
   document.title = entity.title
   setBreadCrumbs(entity)
   updateURLSlug(entity.title)
+  mediaComments.value = entity.comments || []
 }
 
 const file = createResource({
@@ -144,6 +185,31 @@ function closePreview() {
     name: "Folder",
     params: { entityName: file.data.parent_entity },
   })
+}
+
+function onSeekTo(timestamp) {
+  const preview = fileRenderRef.value?.previewRef
+  if (preview?.seekTo) preview.seekTo(timestamp)
+}
+
+function onMarkerClick(comment) {
+  showComments.value = true
+  if (mediaCommentsRef.value) {
+    mediaCommentsRef.value.activeComment = comment.name
+  }
+  const preview = fileRenderRef.value?.previewRef
+  if (preview?.seekTo && comment.timestamp != null) {
+    preview.seekTo(comment.timestamp)
+  }
+}
+
+function onRequestTimestamp() {
+  const preview = fileRenderRef.value?.previewRef
+  if (preview?.pause) preview.pause()
+  const timestamp = preview?.getCurrentTime?.() ?? 0
+  if (mediaCommentsRef.value) {
+    mediaCommentsRef.value.setComposeMeta({ timestamp })
+  }
 }
 
 onMounted(() => {

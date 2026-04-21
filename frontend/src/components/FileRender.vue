@@ -19,7 +19,10 @@
   <component
     :is="previewComponent"
     v-else
+    ref="previewRef"
     :preview-entity="previewEntity"
+    v-bind="mediaProps"
+    @marker-click="(c) => $emit('marker-click', c)"
   />
 </template>
 <script setup>
@@ -29,7 +32,7 @@ import PDFPreview from "./FileTypePreview/PDFPreview.vue"
 import VideoPreview from "./FileTypePreview/VideoPreview.vue"
 import TextPreview from "./FileTypePreview/TextPreview.vue"
 import AudioPreview from "@/components/FileTypePreview/AudioPreview.vue"
-import { computed } from "vue"
+import { computed, ref } from "vue"
 import LucideAlertCircle from "~icons/lucide/alert-circle"
 import { diskSettings } from "@/resources/permissions"
 import store from "@/store"
@@ -44,7 +47,15 @@ const props = defineProps({
     required: false,
     default: true,
   },
+  comments: {
+    type: Array,
+    default: () => [],
+  },
 })
+
+defineEmits(["marker-click"])
+
+const previewRef = ref(null)
 
 if (!diskSettings.data && store.getters.isLoggedIn) diskSettings.fetch()
 const error = computed(() => {
@@ -80,4 +91,14 @@ const getType = (k) => {
   return EXCEPTIONS[k.mime_type] || k.file_type
 }
 const previewComponent = computed(() => RENDERS[getType(props.previewEntity)])
+
+const mediaProps = computed(() => {
+  const fileType = getType(props.previewEntity)
+  if (fileType === "Video") {
+    return { comments: props.comments }
+  }
+  return {}
+})
+
+defineExpose({ previewRef })
 </script>

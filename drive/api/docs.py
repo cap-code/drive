@@ -17,20 +17,22 @@ def save_doc_comment(entity_name, doc_name, content):
 
 @frappe.whitelist(allow_guest=True)
 @rate_limit(key="create_comment", limit=10, seconds=1)
-def create_comment(entity_name, name, content, is_reply, parent_name=None):
+def create_comment(entity_name, name, content, is_reply, parent_name=None, timestamp=None):
     doc = frappe.get_doc("Drive File", entity_name)
     parent = frappe.get_doc("Drive Comment", parent_name) if is_reply else doc
 
     if not user_has_permission(doc, "comment"):
         frappe.throw("You don't have comment access")
 
-    comment = frappe.get_doc(
-        {
-            "doctype": "Drive Comment",
-            "name": name,
-            "content": content,
-        }
-    )
+    comment_data = {
+        "doctype": "Drive Comment",
+        "name": name,
+        "content": content,
+    }
+    if timestamp is not None:
+        comment_data["timestamp"] = float(timestamp)
+
+    comment = frappe.get_doc(comment_data)
     parent.append("replies" if is_reply else "comments", comment)
     parent.save(ignore_permissions=True)
     comment.insert(ignore_permissions=True)
